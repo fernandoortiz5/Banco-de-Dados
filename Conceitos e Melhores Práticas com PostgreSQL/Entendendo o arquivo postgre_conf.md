@@ -1,4 +1,4 @@
-#### O arquivo postgresql.conf
+#### O arquivo postgresql.conf[^'1']
 
 Basicamente dentro desse arquivo, estão armazenadas todas as configurações relacionados ao servidor do ~~PostgreSQL~~. Diversos parâmetros podem ser atualizados e editados para uma melhor performance do servidor.
 
@@ -6,7 +6,7 @@ Alguns desses parâmetros só podem ser alterados com a reinicialização do ban
 
 Podemos através da `view pg_settings` configurada dentro do banco de dados visualizar todas as configurações existentes no arquivo `postgresql.conf`
 
-Utilizamos o seguinte comando para visualizar a view e termos o retorno das configurações.
+Utilizamos o seguinte comando para visualizar a `view` e termos o retorno das configurações.
 
 ```SELECT name, setting FROM pg_settings;```
 
@@ -17,11 +17,19 @@ Esse arquivo por *default* fica armazenado dentro do diretório de dados do clus
 ##### Configurações Internas:
 
 - *LISTEN_ADDRESSES:*	Endereços TCP/IP das interfaces ou redes que o servidor PostgreSQL vai escutar ou liberar conexões.
-- *PORT*: Porta TCP que o servidor PostgreSQL vai escutar. Por padrão a porta configurada é a 5432. É uma prática de segurança recomendada alterar a porta padrão caso seu servidor esteja exposto a uma rede externa.
-- *MAX_CONNECTIONS:* Número máximo de conexões simultâneas conectadas ao servidor PostgreSQL.]
+
+- *PORT*: Porta TCP que o servidor PostgreSQL vai escutar. Por padrão a porta configurada é a **5432**. 
+
+  > É uma prática de segurança recomendada alterar a porta padrão caso seu servidor esteja exposto a uma rede externa.
+
+- *MAX_CONNECTIONS:* Número máximo de conexões simultâneas conectadas ao servidor PostgreSQL.
+
 - *SUPER_USER_RESERVED_CONNECTIONS:* Número de conexões reservadas para conexões ao banco de dados através de super-usuários.
+
 - *AUTHENTICATION_TIMEOUT*: Tempo máximo em segundos para o cliente conseguir uma conexão com o servidor PostgreSQL.
+
 - *PASSWORD_ENCRYPTION:* Algoritmo de criptografia utilizado para senhas de novos usuários criados no banco de dados. É muito importante estudar qual algoritmo vai utilizar.
+
 - *SSL:* Se o servidor PostgreSQL foi compilado e configurado com suporte SSL, esse parâmetro habilita a conexão criptografada por SSL.
 
 ##### Configurações de uso de memória:
@@ -34,9 +42,5 @@ Esse arquivo por *default* fica armazenado dentro do diretório de dados do clus
 
 - *MAINTENANCE_WORK_MEM:* Tamanho de memória para executar operações administrativas como `VACUUM, INDEX, ALTER TABLE`
 
-
-
-[]: https://web.digitalinnovation.one/track/santander-fullstack-developer?tab=path	"Santander Bootcamp | Fullstack Developer - Professor Daniel Costa"
-
-
+[^'1']: Texto elaborado a partir das aulas do Professor Daniel Costa no Santander Bootcamp | Full Stack Developer
 
