@@ -1,4 +1,6 @@
-#### O arquivo postgresql.conf[^'1']
+#### O arquivo postgresql.conf
+
+------
 
 Basicamente dentro desse arquivo, estão armazenadas todas as configurações relacionados ao servidor do ~~PostgreSQL~~. Diversos parâmetros podem ser atualizados e editados para uma melhor performance do servidor.
 
@@ -12,9 +14,13 @@ Utilizamos o seguinte comando para visualizar a `view` e termos o retorno das co
 
 Esse arquivo por *default* fica armazenado dentro do diretório de dados do cluster criado.
 
+
+
 **Dentro do arquivo *postgresql.conf* existem diversos parâmetros importantes, entre eles:**
 
 ##### Configurações Internas:
+
+------
 
 - *LISTEN_ADDRESSES:*	Endereços TCP/IP das interfaces ou redes que o servidor PostgreSQL vai escutar ou liberar conexões.
 
@@ -34,6 +40,8 @@ Esse arquivo por *default* fica armazenado dentro do diretório de dados do clus
 
 ##### Configurações de uso de memória:
 
+------
+
 - *SHARED_BUFFERS:* Tamanho de memória que é compartilhada do servidor PostgreSQL para cache de tabelas, índices e demais relacionamentos. 
 
   > É recomendado reservar 25% do valor total de sua memória RAM. Sempre manter um padrão que não use memória demais e nem que falte memória durante a aplicação.
@@ -42,5 +50,9 @@ Esse arquivo por *default* fica armazenado dentro do diretório de dados do clus
 
 - *MAINTENANCE_WORK_MEM:* Tamanho de memória para executar operações administrativas como `VACUUM, INDEX, ALTER TABLE`
 
-[^'1']: Texto elaborado a partir das aulas do Professor Daniel Costa no Santander Bootcamp | Full Stack Developer
+
+
+Referências:
+
+[Daniel Costa]: https://web.digitalinnovation.one/track/santander-fullstack-developer	"Santander Bootcamp | Full Stack Developer"
 
